@@ -2,7 +2,7 @@
   <img src="famnit.png" style="padding: 32px" />
 </p>
 
-# UP FAMNIT - Basics Of Physics With Biophysics - 2024/2025
+# UP FAMNIT - Teoretične Osnove Fizike Z Biofiziko - 2024/2025
 
 Professor: prof. Jure Pražnkar
 
@@ -10,7 +10,7 @@ Practice assistant:
 
 ## Intro
 
-The repository serves as a personal archive of all code written during the course of Basics Of Physics With Biophysics at UP FAMNIT. The code is written MatLab.
+The repository serves as a personal archive of all code written during the course of TOFZB at UP FAMNIT. The code is written MatLab.
 
 **!!! Code in this repository is a wild mix of genius and "oopsie doopsies" - it’s shared !!! after !!! submitting my assignments, so expect adventures (and bugs). Use or copy at your risk !!!**
 
