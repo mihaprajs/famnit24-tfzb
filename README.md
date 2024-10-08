@@ -10,7 +10,7 @@ Practice assistant: Urška Gerič
 
 ## Intro
 
-The repository serves as a personal archive of all code written during the course of TOFZB at UP FAMNIT. The code is written MatLab.
+The repository serves as a personal archive of all code written during the course of TFZB at UP FAMNIT. The code is written MatLab.
 
 **!!! Code in this repository is a wild mix of genius and "oopsie doopsies" - it’s shared !!! after !!! submitting my assignments, so expect adventures (and bugs). Use or copy at your risk !!!**
 
