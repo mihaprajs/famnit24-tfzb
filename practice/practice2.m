@@ -3,11 +3,7 @@
 %% For loop examples
 disp('--- loop with 1 step ---');
 for i=1:10 % step 1
-<<<<<<< Updated upstream
-	fprintf('%2i\n',i)
-=======
         fprintf('%2i\n',i)
->>>>>>> Stashed changes
 end
 
 disp('--- loop with 10 steps ---')
@@ -17,11 +13,7 @@ end
 
 disp('--- loop with -2 steps ---')
 for i=100:-2:80
-<<<<<<< Updated upstream
 	fprintf('%2i\n',i)
-=======
-        fprintf('%2i\n',i)
->>>>>>> Stashed changes
 end
 
 %% Plot, axes, labels, font size
