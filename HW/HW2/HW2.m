@@ -15,23 +15,36 @@ for eta = eta_value
     d_alpha_derivative = diff(d_alpha, alpha); % get the derivative of the function
     optimal_alpha = solve(d_alpha_derivative == 0, alpha); 
     optimal_value = eval(optimal_alpha); % get numeric value - because it is an array of two numbers I'm using only the one on the 1st index
-    fprintf('Optimal angle for η = %.1f: %.2f°\n', eta, rad2deg(optimal_value(1))); % using rad2deg to get the number in degrees
+    fprintf('Optimal angle for η = %.1f: %.2f°\n', eta, rad2deg(optimal_value(2))); % using rad2deg to get the number in degrees
 end
 
 %% task c)
-f = @(alpha, eta) L * cosd(alpha) ./ sind(alpha) + L * eta ./ sind(alpha); % defining function to be used for ploting
+distance = @(alpha, eta) L * (cos(alpha) ./ sin(alpha)) + (L * eta ./ sin(alpha)); % defining function to be used for ploting
 alpha_values = linspace(0.01, pi-0.01, 100); % avoid division by 0
 
 % graph
+alphas = linspace(0.01, pi, 500);  % Alpha angles in radians
+
 figure;
 hold on;
-plot(rad2deg(alpha_values), f(alpha_values, 1.5), 'r', 'DisplayName', 'η = 1.5');
-plot(rad2deg(alpha_values), f(alpha_values, 2.0), 'g', 'DisplayName', 'η = 2.0');
-plot(rad2deg(alpha_values), f(alpha_values, 2.5), 'b', 'DisplayName', 'η = 2.5');
-plot(rad2deg(alpha_values), f(alpha_values, 3.0), 'm', 'DisplayName', 'η = 3.0');
-xlabel('Angle (degrees)');
-ylabel('Distance d(α)');
-title('Distance vs Angle for Different η Values');
+
+colors = {'k', 'b', 'r', 'y'};  
+optimal_alphas = [132, 120, 114, 109];  % Approximate optimal angles for eta= {1.5, 2.0, 2.5, 3.0} in degrees (retyped from terminal)
+optimal_alphas_rad = deg2rad(optimal_alphas);  % Convert to radians
+
+for i = 1:length(eta_value)
+    eta = eta_value(i);
+    distances = distance(alphas, eta);
+    plot(alphas, distances, colors{i}, 'LineWidth', 2);
+end
+
+xlabel('\alpha');
+ylabel('Distance');
+xticks([0, pi/4, pi/2, 3*pi/4, pi]);
+xticklabels({'0', '\pi/4', '\pi/2', '3\pi/4', '\pi'});
+ylim([0 4]);
+
+grid on;
 hold off;
 
 %% task d)
