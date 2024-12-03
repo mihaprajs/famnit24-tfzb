@@ -39,7 +39,7 @@ scatter(0,0,'r','filled') % inital coordinates  0,0
 scatter(lastPxy(:,1),lastPxy(:,2),'b','filled') % last coordinates
 xlim([-cMax*1.1 cMax*1.1]) % x axis limits
 ylim([-cMax*1.1 cMax*1.1]) % y axis limits, same as x axis limits
-saveas(gcf,'random_walk.png')
+% saveas(gcf,'random_walk.png')
 
 hold off
 
